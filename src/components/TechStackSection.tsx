@@ -1,5 +1,18 @@
 import { motion } from 'framer-motion';
 
+// ✅ Import logos
+import pythonLogo from "../assets/python.png";
+import pytorchLogo from "../assets/pytorch.png";
+import langchainLogo from "../assets/langchain.png";
+import llamaindexLogo from "../assets/llamaindex.png";
+import awsLogo from "../assets/aws.png";
+import gcpLogo from "../assets/gcp.png";
+import dockerLogo from "../assets/Docker-Logo.png";
+import kubernetesLogo from "../assets/kubernetes.svg";
+import kafkaLogo from "../assets/kafka.png";
+import airflowLogo from "../assets/airflow.png";
+import chromaDbLogo from "...assets/chromadb.png";
+
 const techPills = [
   'Python', 'PyTorch', 'LangChain', 'LlamaIndex', 'LangGraph', 'MLflow',
   'AWS (EC2 · Lambda · S3 · Bedrock)', 'GCP', 'Kubernetes', 'Docker',
@@ -52,7 +65,23 @@ const TechStackSection = () => {
                 key={i}
                 className="w-16 h-16 rounded-lg bg-white shadow-sm flex items-center justify-center text-2xl flex-shrink-0"
               >
-                {['🐍', '🔥', '🔗', '🦙', '📊', '☁️', '🐳', '⚡', '📈', '🗄️'][i % 10]}
+               {[...Array(20)].map((_, i) => {
+  const logo = techLogos[i % techLogos.length];
+
+  return (
+    <div
+      key={i}
+      className="w-16 h-16 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0"
+      title={logo.name}
+    >
+      <img
+        src={logo.src}
+        alt={logo.name}
+        className="w-10 h-10 object-contain"
+      />
+    </div>
+  );
+})}
               </div>
             ))}
           </motion.div>
