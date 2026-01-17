@@ -1,6 +1,13 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Zap, Sparkles, Cloud, Users, Heart, ChevronRight } from 'lucide-react';
+import { Brain, Zap, Sparkles, Cloud, Users, Heart, ExternalLink } from 'lucide-react';
+
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+};
 
 type FocusArea = {
   id: string;
@@ -8,20 +15,36 @@ type FocusArea = {
   title: string;
   description: string;
   icon: React.ReactNode;
-  items: { icon: string; title: string }[];
+  projects?: Project[];
+  items?: { icon: string; title: string }[];
 };
 
 const focusAreas: FocusArea[] = [
   {
     id: 'aiml',
-    label: 'Focus 01',
-    title: 'AI/ML Engineering',
-    description: 'I ship models that watch over payments and lending journeys — from feature stores to monitoring dashboards — and keep them honest with evaluation loops.',
+    label: 'AI/ML Projects',
+    title: 'AI/ML Projects',
+    description: 'End-to-end machine learning solutions from feature engineering to production deployment.',
     icon: <Brain className="w-5 h-5" />,
-    items: [
-      { icon: '🎯', title: 'Fraud signal stores' },
-      { icon: '📊', title: 'Credit risk models' },
-      { icon: '📈', title: 'Realtime health boards' }
+    projects: [
+      {
+        title: 'Insurance Charge Prediction',
+        description: 'End-End Machine Learning project using MLOPS lifecycle. Demonstrated expertise in deploying predictive models using Flask and adeptly created interactive GUIs using HTML and CSS for seamless user experience. Used GradientBoostingRegressor achieving 85% r2_score after tuning.',
+        image: '/placeholder.svg',
+        link: '#'
+      },
+      {
+        title: 'Taxi Fare Prediction',
+        description: 'Model developed for New York City to predict actual taxi prices between two locations, aiming to save users from unfair practices. The project creates a model that accurately predicts and analyzes taxi fares based on distance.',
+        image: '/placeholder.svg',
+        link: '#'
+      },
+      {
+        title: 'Credit Risk Analysis',
+        description: 'Built a comprehensive credit scoring model using ensemble methods. Implemented feature stores for real-time inference and monitoring dashboards for model health tracking.',
+        image: '/placeholder.svg',
+        link: '#'
+      }
     ]
   },
   {
@@ -106,7 +129,7 @@ const FocusSection = () => {
               }`}
             >
               {area.icon}
-              <span className="hidden sm:inline">{area.title.split(' ')[0]}</span>
+              <span className="hidden sm:inline">{area.id === 'aiml' ? 'AI/ML Projects' : area.title.split(' ')[0]}</span>
             </button>
           ))}
         </div>
@@ -119,41 +142,96 @@ const FocusSection = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start max-w-5xl mx-auto"
           >
-            {/* Left - Description */}
-            <div className="space-y-4">
-              <p className="text-xs uppercase tracking-widest text-slate-400 font-medium">
-                {activeArea.label}
-              </p>
-              <h2 className="text-2xl md:text-3xl font-semibold text-slate-900">
-                {activeArea.title}
-              </h2>
-              <p className="text-slate-600 leading-relaxed">
-                {activeArea.description}
-              </p>
-            </div>
+            {/* AI/ML Projects - Special project-style layout */}
+            {activeTab === 'aiml' && activeArea.projects ? (
+              <div className="max-w-5xl mx-auto">
+                {/* Section Header */}
+                <div className="mb-10">
+                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
+                    Projects
+                  </h2>
+                  <div className="w-16 h-1 bg-cyan-400 rounded-full" />
+                </div>
 
-            {/* Right - Project-style items */}
-            <div className="space-y-4">
-              {activeArea.items.map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 hover:bg-slate-100 transition-all duration-200 cursor-pointer group"
-                >
-                  <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center shadow-sm">
-                    <span className="text-2xl">{item.icon}</span>
-                  </div>
-                  <span className="font-medium text-slate-800 group-hover:text-slate-900 transition-colors">
-                    {item.title}
-                  </span>
-                  <ChevronRight className="ml-auto text-slate-400 group-hover:text-slate-600 transition-colors" size={20} />
-                </motion.div>
-              ))}
-            </div>
+                {/* Project Cards */}
+                <div className="space-y-16">
+                  {activeArea.projects.map((project, index) => (
+                    <motion.div
+                      key={project.title}
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.15 }}
+                      className="grid md:grid-cols-2 gap-8 items-start"
+                    >
+                      {/* Project Image */}
+                      <div className="relative group">
+                        <div className="aspect-[4/3] rounded-lg border border-slate-200 bg-slate-50 overflow-hidden shadow-sm">
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        </div>
+                      </div>
+
+                      {/* Project Info */}
+                      <div className="space-y-4">
+                        <h3 className="text-2xl font-bold text-slate-900">
+                          {project.title}
+                        </h3>
+                        <p className="text-slate-600 leading-relaxed text-base">
+                          {project.description}
+                        </p>
+                        <a
+                          href={project.link}
+                          className="inline-flex items-center gap-2 text-cyan-600 hover:text-cyan-700 font-medium transition-colors group"
+                        >
+                          View Project
+                          <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
+                        </a>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              /* Other Focus Areas - Original layout */
+              <div className="grid md:grid-cols-2 gap-10 lg:gap-16 items-start max-w-5xl mx-auto">
+                {/* Left - Description */}
+                <div className="space-y-4">
+                  <p className="text-xs uppercase tracking-widest text-slate-400 font-medium">
+                    {activeArea.label}
+                  </p>
+                  <h2 className="text-2xl md:text-3xl font-semibold text-slate-900">
+                    {activeArea.title}
+                  </h2>
+                  <p className="text-slate-600 leading-relaxed">
+                    {activeArea.description}
+                  </p>
+                </div>
+
+                {/* Right - Items */}
+                <div className="space-y-4">
+                  {activeArea.items?.map((item, index) => (
+                    <motion.div
+                      key={item.title}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.3, delay: index * 0.1 }}
+                      className="flex items-center gap-4 p-4 rounded-xl bg-slate-50 hover:bg-slate-100 transition-all duration-200 cursor-pointer group"
+                    >
+                      <div className="w-12 h-12 rounded-lg bg-white flex items-center justify-center shadow-sm">
+                        <span className="text-2xl">{item.icon}</span>
+                      </div>
+                      <span className="font-medium text-slate-800 group-hover:text-slate-900 transition-colors">
+                        {item.title}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            )}
           </motion.div>
         </AnimatePresence>
       </div>
