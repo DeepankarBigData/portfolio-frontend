@@ -32,16 +32,16 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Left side - Action buttons */}
         <div className="flex items-center gap-3">
-          <button 
-            onClick={() => scrollToSection('connect')}
+          <a 
+            href="/chat.html"
             className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 border ${
               scrolled 
                 ? 'border-slate-300 text-slate-800 hover:bg-slate-100' 
                 : 'border-white/30 text-white hover:bg-white/10'
             }`}
           >
-            Say Hi!
-          </button>
+            Ask my Agent
+          </a>
         </div>
 
         {/* Right side - Navigation links */}
