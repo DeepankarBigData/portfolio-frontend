@@ -8,10 +8,8 @@ import llamaindexLogo from "../assets/llamaindex.png";
 import awsLogo from "../assets/aws.png";
 import gcpLogo from "../assets/gcp.png";
 import dockerLogo from "../assets/Docker-Logo.png";
-import kubernetesLogo from "../assets/kubernetes.svg";
 import kafkaLogo from "../assets/kafka.png";
 import airflowLogo from "../assets/airflow.png";
-import chromaDbLogo from "...assets/chromadb.png";
 
 const techPills = [
   'Python', 'PyTorch', 'LangChain', 'LlamaIndex', 'LangGraph', 'MLflow',
