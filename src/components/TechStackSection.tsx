@@ -20,6 +20,19 @@ const techPills = [
   'n8n · REST APIs', 'Prometheus · Loki · Grafana'
 ];
 
+const techLogos = [
+  { name: "Python", src: pythonLogo },
+  { name: "PyTorch", src: pytorchLogo },
+  { name: "LangChain", src: langchainLogo },
+  { name: "LlamaIndex", src: llamaindexLogo },
+  { name: "AWS", src: awsLogo },
+  { name: "GCP", src: gcpLogo },
+  { name: "Docker", src: dockerLogo },
+  { name: "Kubernetes", src: kubernetesLogo },
+  { name: "Kafka", src: kafkaLogo },
+  { name: "Airflow", src: airflowLogo },
+];
+
 const TechStackSection = () => {
   return (
     <section id="techstack" className="py-24 px-6 bg-slate-50">
