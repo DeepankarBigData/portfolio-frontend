@@ -30,17 +30,20 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Left side - Action buttons */}
-        <div className="flex items-center gap-3">
+        {/* Left side - Personal Logo */}
+        <div className="flex items-center">
           <a 
-            href="/chat.html"
-            className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 border ${
-              scrolled 
-                ? 'border-slate-300 text-slate-800 hover:bg-slate-100' 
-                : 'border-white/30 text-white hover:bg-white/10'
+            href="#hero"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('hero');
+            }}
+            className={`text-2xl font-bold tracking-tight transition-colors duration-200 ${
+              scrolled ? 'text-slate-900' : 'text-white'
             }`}
           >
-            Ask my Agent
+            <span className="font-light">D</span>
+            <span className="font-bold">K</span>
           </a>
         </div>
 
@@ -49,7 +52,8 @@ const Navbar = () => {
           {[
             { id: 'hero', label: 'Home' },
             { id: 'focus', label: 'Focus' },
-            { id: 'about', label: 'About' },
+            { id: 'education', label: 'Education' },
+            { id: 'courses', label: 'Courses' },
             { id: 'connect', label: 'Connect' }
           ].map((item) => (
             <li key={item.id}>

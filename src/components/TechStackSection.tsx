@@ -1,15 +1,34 @@
 import { motion } from 'framer-motion';
 
-// ✅ Import logos
+// Import all logos from src/assets
 import pythonLogo from "../assets/python.png";
-import pytorchLogo from "../assets/pytorch.png";
-import langchainLogo from "../assets/langchain.png";
-import llamaindexLogo from "../assets/llamaindex.png";
-import awsLogo from "../assets/aws.png";
+import pytorchLogo from "../assets/pytorch.jpg";
+import langchainLogo from "../assets/LangChain_Logo.png";
+import llamaindexLogo from "../assets/llama_index.png";
+import langgraphLogo from "../assets/lang_graph.svg";
+import mlflowLogo from "../assets/MLFLOW.png";
+import awsLogo from "../assets/aws s3.png";
+import awsBedrockLogo from "../assets/aws bedrock.png";
+import awsLambdaLogo from "../assets/aws lambda.png";
+import awsEc2Logo from "../assets/aws ec2.png";
 import gcpLogo from "../assets/gcp.png";
 import dockerLogo from "../assets/Docker-Logo.png";
+import kubeLogo from "../assets/kube.png";
 import kafkaLogo from "../assets/kafka.png";
 import airflowLogo from "../assets/airflow.png";
+import sqlLogo from "../assets/sql.png";
+import nosqlLogo from "../assets/no_sql.webp";
+import chromadbLogo from "../assets/chromadb.png";
+import pineconeLogo from "../assets/pinecone.jpg";
+import pgvectorLogo from "../assets/pgvector.svg";
+import n8nLogo from "../assets/n8n.png";
+import restApiLogo from "../assets/rest_api.png";
+import prometheusLogo from "../assets/Prometheus.webp";
+import grafanaLogo from "../assets/Grafana_loki_logo.png";
+import ollamaLogo from "../assets/ollama.png";
+import gitLogo from "../assets/Git.png";
+import postmanLogo from "../assets/postman.png";
+import seleniumLogo from "../assets/selenium.png";
 
 const techPills = [
   'Python', 'PyTorch', 'LangChain', 'LlamaIndex', 'LangGraph', 'MLflow',
@@ -23,15 +42,36 @@ const techLogos = [
   { name: "PyTorch", src: pytorchLogo },
   { name: "LangChain", src: langchainLogo },
   { name: "LlamaIndex", src: llamaindexLogo },
-  { name: "AWS", src: awsLogo },
+  { name: "LangGraph", src: langgraphLogo },
+  { name: "MLflow", src: mlflowLogo },
+  { name: "AWS S3", src: awsLogo },
+  { name: "AWS Bedrock", src: awsBedrockLogo },
+  { name: "AWS Lambda", src: awsLambdaLogo },
+  { name: "AWS EC2", src: awsEc2Logo },
   { name: "GCP", src: gcpLogo },
   { name: "Docker", src: dockerLogo },
-  { name: "Kubernetes", src: kubernetesLogo },
+  { name: "Kubernetes", src: kubeLogo },
   { name: "Kafka", src: kafkaLogo },
   { name: "Airflow", src: airflowLogo },
+  { name: "SQL", src: sqlLogo },
+  { name: "NoSQL", src: nosqlLogo },
+  { name: "ChromaDB", src: chromadbLogo },
+  { name: "Pinecone", src: pineconeLogo },
+  { name: "pgvector", src: pgvectorLogo },
+  { name: "n8n", src: n8nLogo },
+  { name: "REST API", src: restApiLogo },
+  { name: "Prometheus", src: prometheusLogo },
+  { name: "Grafana", src: grafanaLogo },
+  { name: "Ollama", src: ollamaLogo },
+  { name: "Git", src: gitLogo },
+  { name: "Postman", src: postmanLogo },
+  { name: "Selenium", src: seleniumLogo },
 ];
 
 const TechStackSection = () => {
+  // Duplicate logos for seamless infinite scroll
+  const duplicatedLogos = [...techLogos, ...techLogos];
+
   return (
     <section id="techstack" className="py-24 px-6 bg-slate-50">
       <motion.div
@@ -67,32 +107,20 @@ const TechStackSection = () => {
           
           <motion.div 
             className="flex gap-8"
-            animate={{ x: [0, -800] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            animate={{ x: [0, -1400] }}
+            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
           >
-            {/* Logo placeholders with emoji icons */}
-            {[...Array(20)].map((_, i) => (
+            {duplicatedLogos.map((logo, i) => (
               <div
-                key={i}
-                className="w-16 h-16 rounded-lg bg-white shadow-sm flex items-center justify-center text-2xl flex-shrink-0"
+                key={`${logo.name}-${i}`}
+                className="w-16 h-16 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0"
+                title={logo.name}
               >
-               {[...Array(20)].map((_, i) => {
-  const logo = techLogos[i % techLogos.length];
-
-  return (
-    <div
-      key={i}
-      className="w-16 h-16 rounded-lg bg-white shadow-sm flex items-center justify-center flex-shrink-0"
-      title={logo.name}
-    >
-      <img
-        src={logo.src}
-        alt={logo.name}
-        className="w-10 h-10 object-contain"
-      />
-    </div>
-  );
-})}
+                <img
+                  src={logo.src}
+                  alt={logo.name}
+                  className="w-10 h-10 object-contain"
+                />
               </div>
             ))}
           </motion.div>
