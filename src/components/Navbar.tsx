@@ -43,7 +43,7 @@ const Navbar = () => {
             }`}
           >
             <span className="font-light">D</span>
-            <span className="font-bold">K</span>
+            <span className="font-bold">P</span>
           </a>
         </div>
 
