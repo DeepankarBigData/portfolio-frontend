@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Brain, Zap, Sparkles, Cloud, Users, Heart, ExternalLink } from 'lucide-react';
+import { Brain, Sparkles, Cloud, Users, Heart, ExternalLink } from 'lucide-react';
 
 type Project = {
   title: string;
@@ -48,20 +48,8 @@ const focusAreas: FocusArea[] = [
     ]
   },
   {
-    id: 'automation',
-    label: 'Focus 02',
-    title: 'Fintech Automation',
-    description: 'Pairing domain knowledge with low-friction automation — workflow APIs, alerting, and ops playbooks — so finance teams can move faster with confidence.',
-    icon: <Zap className="w-5 h-5" />,
-    items: [
-      { icon: '💳', title: 'Payment rails tooling' },
-      { icon: '🔔', title: 'Compliance-ready alerts' },
-      { icon: '🤝', title: 'Operator handoffs' }
-    ]
-  },
-  {
     id: 'genai',
-    label: 'Focus 03',
+    label: 'Gen AI',
     title: 'Generative AI Systems',
     description: 'I prototype RAG agents for support desks, research assistants for analysts, and policy-aligned chat experiences powered by LangChain, LlamaIndex, and LangGraph.',
     icon: <Sparkles className="w-5 h-5" />,
@@ -73,7 +61,7 @@ const focusAreas: FocusArea[] = [
   },
   {
     id: 'cloud',
-    label: 'Focus 04',
+    label: 'Cloud',
     title: 'Cloud & Data Platforms',
     description: 'AWS, Kubernetes, Kafka, Airflow, and observability stacks keep my deployments calm. Infrastructure is code, metrics are built-in, and rollbacks are rehearsed.',
     icon: <Cloud className="w-5 h-5" />,
@@ -85,7 +73,7 @@ const focusAreas: FocusArea[] = [
   },
   {
     id: 'leadership',
-    label: 'Focus 05',
+    label: 'Leadership',
     title: 'Business & Leadership',
     description: 'MBA coursework in finance helps me map every model to a business lever. I lead rituals, unblock teams, and write docs that keep priorities aligned.',
     icon: <Users className="w-5 h-5" />,
@@ -97,7 +85,7 @@ const focusAreas: FocusArea[] = [
   },
   {
     id: 'wellness',
-    label: 'Focus 06',
+    label: 'Wellness',
     title: 'Wellness & Discipline',
     description: 'Fitness, mindfulness, and purpose-driven routines fuel the energy behind each build. Strong fundamentals outside the laptop show up in the work.',
     icon: <Heart className="w-5 h-5" />,
@@ -129,7 +117,7 @@ const FocusSection = () => {
               }`}
             >
               {area.icon}
-              <span className="hidden sm:inline">{area.id === 'aiml' ? 'AI/ML Projects' : area.title.split(' ')[0]}</span>
+              <span className="hidden sm:inline">{area.label}</span>
             </button>
           ))}
         </div>

@@ -50,9 +50,6 @@ const CoursesSection = () => {
         transition={{ duration: 0.6 }}
         className="max-w-5xl mx-auto"
       >
-        <p className="text-sm uppercase tracking-widest text-slate-400 font-medium text-center mb-4">
-          Courses & Certifications
-        </p>
         <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
           Continuous Learning
         </h2>
@@ -68,8 +65,8 @@ const CoursesSection = () => {
               className="bg-white rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:border-slate-300 transition-all duration-300 group"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  <Award className="w-5 h-5 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                  <Award className="w-6 h-6 text-white" />
                 </div>
                 <a 
                   href={course.certLink}
@@ -85,13 +82,13 @@ const CoursesSection = () => {
               <h3 className="text-lg font-semibold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                 {course.title}
               </h3>
-              <p className="text-sm text-slate-500 mb-4">{course.provider}</p>
+              <p className="text-sm text-blue-600 mb-4">{course.provider}</p>
 
               <div className="flex flex-wrap gap-2">
                 {course.skills.map((skill) => (
                   <span 
                     key={skill}
-                    className="px-2.5 py-1 text-xs font-medium bg-slate-100 text-slate-600 rounded-full"
+                    className="px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 rounded-full border border-slate-200"
                   >
                     {skill}
                   </span>
@@ -100,16 +97,6 @@ const CoursesSection = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center text-slate-500 mt-12 text-sm"
-        >
-          Click on any certificate icon to view the credential
-        </motion.p>
       </motion.div>
     </section>
   );

@@ -29,7 +29,8 @@ const ConnectSection = () => {
               Say Hi!
             </button>
             <a
-              href="#"
+              href="/resume.pdf"
+              download="Deepankar_Resume.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition-colors"
             >
               <FileText size={18} />
