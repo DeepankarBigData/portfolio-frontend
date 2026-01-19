@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,9 +16,27 @@ const Navbar = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const handleNavClick = (item: { id: string; label: string; path?: string }) => {
+    if (item.path) {
+      navigate(item.path);
+    } else {
+      scrollToSection(item.id);
     }
   };
 
@@ -54,11 +75,12 @@ const Navbar = () => {
             { id: 'focus', label: 'Focus' },
             { id: 'education', label: 'Education' },
             { id: 'courses', label: 'Courses' },
+            { id: 'skills', label: 'Skills', path: '/skills' },
             { id: 'connect', label: 'Connect' }
           ].map((item) => (
             <li key={item.id}>
               <button
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleNavClick(item)}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   scrolled 
                     ? 'text-slate-600 hover:text-slate-900' 
