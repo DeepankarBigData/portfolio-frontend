@@ -7,47 +7,71 @@ const ConnectSection = () => {
 
   return (
     <>
-      <section id="connect" className="py-24 px-6 bg-slate-900 text-white">
+      <section id="connect" className="relative py-24 px-6 bg-gradient-to-b from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white overflow-hidden">
+        {/* Subtle background effects */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
+        </div>
+        
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="max-w-4xl mx-auto text-center"
+          className="relative z-10 max-w-4xl mx-auto text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Let's Connect</h2>
-          <p className="text-slate-300 mb-10 max-w-xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
+            Let's Connect
+          </h2>
+          <p className="text-slate-400 mb-12 max-w-xl mx-auto text-lg">
             Whether you're a recruiter, fellow engineer, or just curious — I'd love to hear from you.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button
+          <div className="flex flex-wrap justify-center gap-5 mb-14">
+            <motion.button
               onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-slate-900 rounded-full font-medium hover:bg-slate-100 transition-colors"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 rounded-full font-semibold text-lg shadow-lg shadow-white/10 hover:shadow-xl hover:shadow-white/20 transition-all duration-300"
             >
-              <Mail size={18} />
+              <Mail size={20} />
               Say Hi!
-            </button>
-            <a
+            </motion.button>
+            <motion.a
               href="/resume.pdf"
               download="Deepankar_Resume.pdf"
-              className="inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition-colors"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-3 px-8 py-4 border-2 border-slate-600 text-white rounded-full font-semibold text-lg hover:border-slate-400 hover:bg-white/5 transition-all duration-300"
             >
-              <FileText size={18} />
+              <FileText size={20} />
               Resume
-            </a>
+            </motion.a>
           </div>
 
-          <div className="flex justify-center gap-6">
-            <a href="#" className="text-slate-400 hover:text-white transition-colors">
-              <Linkedin size={24} />
-            </a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors">
-              <Github size={24} />
-            </a>
-            <a href="#" className="text-slate-400 hover:text-white transition-colors">
-              <Mail size={24} />
-            </a>
+          <div className="flex justify-center gap-8">
+            <motion.a 
+              href="#" 
+              whileHover={{ scale: 1.15, y: -2 }}
+              className="text-slate-500 hover:text-white transition-colors duration-300"
+            >
+              <Linkedin size={28} />
+            </motion.a>
+            <motion.a 
+              href="#" 
+              whileHover={{ scale: 1.15, y: -2 }}
+              className="text-slate-500 hover:text-white transition-colors duration-300"
+            >
+              <Github size={28} />
+            </motion.a>
+            <motion.a 
+              href="#" 
+              whileHover={{ scale: 1.15, y: -2 }}
+              className="text-slate-500 hover:text-white transition-colors duration-300"
+            >
+              <Mail size={28} />
+            </motion.a>
           </div>
         </motion.div>
       </section>

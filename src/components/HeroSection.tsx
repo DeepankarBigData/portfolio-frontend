@@ -1,25 +1,13 @@
 import { motion } from 'framer-motion';
 import { MessageSquare } from 'lucide-react';
 import profileImage from '../assets/profile.jpg';
+import AIBackgroundAnimation from './AIBackgroundAnimation';
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-900">
-      {/* Animated background circles */}
-      <div className="absolute inset-0">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.1 }}
-          transition={{ duration: 2 }}
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl"
-        />
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.08 }}
-          transition={{ duration: 2, delay: 0.5 }}
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl"
-        />
-      </div>
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* AI/ML Themed Animated Background */}
+      <AIBackgroundAnimation />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <motion.div
