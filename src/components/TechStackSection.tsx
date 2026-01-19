@@ -7,69 +7,95 @@ import langchainLogo from "../assets/LangChain_Logo.png";
 import llamaindexLogo from "../assets/llama_index.png";
 import langgraphLogo from "../assets/lang_graph.svg";
 import mlflowLogo from "../assets/MLFLOW.png";
-import awsLogo from "../assets/aws s3.png";
+import awsS3Logo from "../assets/aws s3.png";
 import awsBedrockLogo from "../assets/aws bedrock.png";
 import awsLambdaLogo from "../assets/aws lambda.png";
+import awsEc2Logo from "../assets/aws ec2.png";
 import dockerLogo from "../assets/Docker-Logo.png";
 import kubeLogo from "../assets/kube.png";
 import kafkaLogo from "../assets/kafka.png";
 import airflowLogo from "../assets/airflow.png";
 import sqlLogo from "../assets/sql.png";
+import nosqlLogo from "../assets/no_sql.webp";
 import chromadbLogo from "../assets/chromadb.png";
 import pineconeLogo from "../assets/pinecone.jpg";
-import ollamaLogo from "../assets/ollama.png";
-import seleniumLogo from "../assets/selenium.png";
-import mcpLogo from "../assets/mcp.jpg";
-import alpacaLogo from "../assets/aplaca.webp";
+import pgvectorLogo from "../assets/pgvector.svg";
+import n8nLogo from "../assets/n8n.png";
+import restApiLogo from "../assets/rest_api.png";
+import prometheusLogo from "../assets/Prometheus.webp";
+import grafanaLogo from "../assets/Grafana_loki_logo.png";
+import gcpLogo from "../assets/gcp.png";
+import postmanLogo from "../assets/postman.png";
 
-const techLogos = [
-  { name: "AWS Lambda", src: awsLambdaLogo },
-  { name: "Amazon S3", src: awsLogo },
-  { name: "Amazon Bedrock", src: awsBedrockLogo },
-  { name: "Docker", src: dockerLogo },
-  { name: "Kubernetes", src: kubeLogo },
-  { name: "Kafka", src: kafkaLogo },
-  { name: "Airflow", src: airflowLogo },
-  { name: "SQL", src: sqlLogo },
-  { name: "PyTorch", src: pytorchLogo },
-  { name: "Selenium", src: seleniumLogo },
-  { name: "MCP", src: mcpLogo },
-  { name: "Ollama", src: ollamaLogo },
-  { name: "Alpaca", src: alpacaLogo },
+// Skill tags for top section
+const skillTags = [
+  ['Python', 'PyTorch', 'LangChain', 'LlamaIndex', 'LangGraph', 'MLflow', 'AWS (EC2 · Lambda · S3 · Bedrock)'],
+  ['GCP', 'Kubernetes', 'Docker', 'Kafka', 'Airflow', 'SQL & NoSQL', 'ChromaDB · Pinecone · pgvector'],
+  ['n8n · REST APIs', 'Prometheus · Loki · Grafana']
+];
+
+// Logos for scrolling section
+const techLogosRow1 = [
   { name: "Python", src: pythonLogo },
+  { name: "PyTorch", src: pytorchLogo },
   { name: "LangChain", src: langchainLogo },
   { name: "LlamaIndex", src: llamaindexLogo },
   { name: "LangGraph", src: langgraphLogo },
+];
+
+const techLogosRow2 = [
+  { name: "n8n", src: n8nLogo },
+  { name: "REST API", src: restApiLogo },
   { name: "MLflow", src: mlflowLogo },
-  { name: "ChromaDB", src: chromadbLogo },
-  { name: "Pinecone", src: pineconeLogo },
+  { name: "Postman", src: postmanLogo },
+  { name: "AWS EC2", src: awsEc2Logo },
 ];
 
 const TechStackSection = () => {
   // Duplicate logos for seamless infinite scroll
-  const duplicatedLogos = [...techLogos, ...techLogos];
+  const duplicatedRow1 = [...techLogosRow1, ...techLogosRow1, ...techLogosRow1];
+  const duplicatedRow2 = [...techLogosRow2, ...techLogosRow2, ...techLogosRow2];
 
   return (
-    <section id="techstack" className="py-16 px-6 bg-slate-50/50 overflow-hidden">
+    <section id="techstack" className="py-16 px-6 bg-white overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="max-w-6xl mx-auto"
+        className="max-w-5xl mx-auto"
       >
-        {/* Scrolling tech logos with labels - similar to reference */}
+        {/* Title */}
+        <h2 className="text-xl font-semibold text-slate-800 mb-6">Tech Stack</h2>
+
+        {/* Skill Tags Section */}
+        <div className="mb-12 space-y-3">
+          {skillTags.map((row, rowIndex) => (
+            <div key={rowIndex} className="flex flex-wrap gap-2">
+              {row.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-4 py-2 text-sm text-slate-700 bg-white border border-slate-200 rounded-full hover:border-slate-300 hover:shadow-sm transition-all"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Scrolling Logos Section */}
         <div className="relative overflow-hidden py-8">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-slate-50/50 to-transparent z-10" />
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-slate-50/50 to-transparent z-10" />
+          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10" />
           
-          {/* First row */}
+          {/* First row - scrolling left */}
           <motion.div 
-            className="flex gap-12 mb-8"
-            animate={{ x: [0, -1800] }}
-            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+            className="flex gap-16 mb-10 items-center"
+            animate={{ x: [0, -1000] }}
+            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
           >
-            {duplicatedLogos.slice(0, 14).map((logo, i) => (
+            {duplicatedRow1.map((logo, i) => (
               <div
                 key={`row1-${logo.name}-${i}`}
                 className="flex items-center gap-3 flex-shrink-0"
@@ -77,22 +103,22 @@ const TechStackSection = () => {
                 <img
                   src={logo.src}
                   alt={logo.name}
-                  className="w-8 h-8 object-contain"
+                  className="h-10 w-auto object-contain max-w-[120px]"
                 />
-                <span className="text-slate-600 font-medium whitespace-nowrap text-sm">
+                <span className="text-slate-600 font-medium whitespace-nowrap text-base">
                   {logo.name}
                 </span>
               </div>
             ))}
           </motion.div>
 
-          {/* Second row - reverse direction */}
+          {/* Second row - scrolling right */}
           <motion.div 
-            className="flex gap-12"
-            animate={{ x: [-1800, 0] }}
-            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+            className="flex gap-16 items-center"
+            animate={{ x: [-1000, 0] }}
+            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
           >
-            {duplicatedLogos.slice(7).map((logo, i) => (
+            {duplicatedRow2.map((logo, i) => (
               <div
                 key={`row2-${logo.name}-${i}`}
                 className="flex items-center gap-3 flex-shrink-0"
@@ -100,9 +126,9 @@ const TechStackSection = () => {
                 <img
                   src={logo.src}
                   alt={logo.name}
-                  className="w-8 h-8 object-contain"
+                  className="h-10 w-auto object-contain max-w-[120px]"
                 />
-                <span className="text-slate-600 font-medium whitespace-nowrap text-sm">
+                <span className="text-slate-600 font-medium whitespace-nowrap text-base">
                   {logo.name}
                 </span>
               </div>
