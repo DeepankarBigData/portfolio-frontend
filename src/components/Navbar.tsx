@@ -75,7 +75,7 @@ const Navbar = () => {
             { id: 'focus', label: 'Focus' },
             { id: 'education', label: 'Education' },
             { id: 'courses', label: 'Courses' },
-            { id: 'skills', label: 'Skills', path: '/skills' },
+            { id: 'skills', label: 'Skills' },
             { id: 'connect', label: 'Connect' }
           ].map((item) => (
             <li key={item.id}>

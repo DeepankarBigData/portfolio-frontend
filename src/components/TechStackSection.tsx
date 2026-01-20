@@ -57,7 +57,7 @@ const TechStackSection = () => {
   const duplicatedRow2 = [...techLogosRow2, ...techLogosRow2, ...techLogosRow2];
 
   return (
-    <section id="techstack" className="py-16 px-6 bg-white overflow-hidden">
+    <section id="skills" className="py-16 px-6 bg-white overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
