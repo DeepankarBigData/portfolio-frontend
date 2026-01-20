@@ -139,7 +139,7 @@ const FocusSection = () => {
                   <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
                     Projects
                   </h2>
-                  <div className="w-16 h-1 bg-cyan-400 rounded-full" />
+                  <div className="w-16 h-1 bg-slate-400 rounded-full" />
                 </div>
 
                 {/* Project Cards */}
@@ -173,7 +173,7 @@ const FocusSection = () => {
                         </p>
                         <a
                           href={project.link}
-                          className="inline-flex items-center gap-2 text-cyan-600 hover:text-cyan-700 font-medium transition-colors group"
+                          className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-800 font-medium transition-colors group"
                         >
                           View Project
                           <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />

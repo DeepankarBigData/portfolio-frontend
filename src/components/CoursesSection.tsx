@@ -69,7 +69,7 @@ const CoursesSection = () => {
             >
               <div className="grid md:grid-cols-[280px_1fr] gap-0">
                 {/* Certificate Image */}
-                <div className="h-44 md:h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                <div className="h-44 md:h-48 bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center">
                   <img
                     src={course.image}
                     alt={course.title}
@@ -78,7 +78,7 @@ const CoursesSection = () => {
                       const target = e.target as HTMLImageElement;
                       target.style.display = 'none';
                       target.parentElement!.innerHTML = `
-                        <div class="flex flex-col items-center justify-center h-full text-blue-600">
+                        <div class="flex flex-col items-center justify-center h-full text-slate-600">
                           <svg class="w-16 h-16 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
                           </svg>
@@ -91,7 +91,7 @@ const CoursesSection = () => {
 
                 {/* Content */}
                 <div className="p-5 md:p-6 flex flex-col justify-center">
-                  <h3 className="text-lg md:text-xl font-bold text-blue-700 mb-1.5">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-1.5">
                     {course.title}
                   </h3>
                   <p className="text-slate-600 mb-3 text-sm">
@@ -101,7 +101,7 @@ const CoursesSection = () => {
                     href={course.certLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors w-fit"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-800 transition-colors w-fit"
                   >
                     <ExternalLink className="w-4 h-4" />
                     View Certificate
