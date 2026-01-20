@@ -29,7 +29,7 @@ const educationData = [
 
 const EducationSection = () => {
   return (
-    <section id="education" className="py-20 px-6 bg-blue-50/30">
+    <section id="education" className="py-20 px-6 bg-slate-50/50">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -66,13 +66,13 @@ const EducationSection = () => {
 
                 {/* Content */}
                 <div className="p-5 md:p-6 flex flex-col justify-center">
-                  <h3 className="text-lg md:text-xl font-bold text-blue-700 mb-1.5">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-1.5">
                     {edu.degree}
                   </h3>
                   <p className="text-slate-600 mb-2 text-sm">
                     {edu.institution}
                   </p>
-                  <p className="text-sm font-medium text-green-600">
+                  <p className="text-sm font-medium text-slate-500">
                     {edu.period}
                   </p>
                 </div>

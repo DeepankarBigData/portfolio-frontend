@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, FileText, X } from 'lucide-react';
+import { Mail, Linkedin, Github, X } from 'lucide-react';
 
 const ConnectSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -38,16 +38,6 @@ const ConnectSection = () => {
               <Mail size={20} />
               Say Hi!
             </motion.button>
-            <motion.a
-              href="/resume.pdf"
-              download="Deepankar_Resume.pdf"
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-3 px-8 py-4 border-2 border-slate-600 text-white rounded-full font-semibold text-lg hover:border-slate-400 hover:bg-white/5 transition-all duration-300"
-            >
-              <FileText size={20} />
-              Resume
-            </motion.a>
           </div>
 
           <div className="flex justify-center gap-8">
