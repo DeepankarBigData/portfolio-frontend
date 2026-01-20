@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MessageSquare } from 'lucide-react';
+import { MessageSquare, Download } from 'lucide-react';
 import profileImage from '../assets/profile.jpg';
 import AIBackgroundAnimation from './AIBackgroundAnimation';
 
@@ -42,19 +42,35 @@ const HeroSection = () => {
             Currently crafting ML solutions at Viyona Fintech while pursuing MBA in Finance.
           </p>
 
-          {/* Ask My Agent Button */}
-          <motion.a
-            href="/chat.html"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
-          >
-            <MessageSquare className="w-5 h-5" />
-            Ask My Agent About Me
-          </motion.a>
+          {/* Primary Action Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <motion.a
+              href="/chat.html"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+            >
+              <MessageSquare className="w-5 h-5" />
+              Ask My Agent About Me
+            </motion.a>
+
+            <motion.a
+              href="/Deepankar_Resume.pdf"
+              download
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-transparent border-2 border-white/50 text-white rounded-full font-semibold text-lg hover:bg-white/10 hover:border-white transition-all duration-300"
+            >
+              <Download className="w-5 h-5" />
+              Download Resume
+            </motion.a>
+          </div>
 
           <motion.p
             initial={{ opacity: 0 }}
