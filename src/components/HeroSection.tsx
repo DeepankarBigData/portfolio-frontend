@@ -32,14 +32,14 @@ const HeroSection = () => {
           <p className="text-sm uppercase tracking-widest text-slate-400 font-medium mb-4">
             AI/ML Engineer • Finance Enthusiast
           </p>
-          
+
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             Deepankar
           </h1>
-          
+
           <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Building intelligent systems at the intersection of AI, finance, and automation.
-            Currently crafting ML solutions at Viyona Fintech while pursuing MBA in Finance.
+            Building intelligent systems at the intersection of AI and automation.
+            Currently crafting AI solutions at Praval Infotech while pursuing courses at Coursera.
           </p>
 
           {/* Primary Action Buttons */}
