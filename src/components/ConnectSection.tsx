@@ -54,7 +54,7 @@ const ConnectSection = () => {
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
           <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl" />
         </div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,22 +82,22 @@ const ConnectSection = () => {
           </div>
 
           <div className="flex justify-center gap-8">
-            <motion.a 
-              href="#" 
+            <motion.a
+              href="#"
               whileHover={{ scale: 1.15, y: -2 }}
               className="text-slate-500 hover:text-white transition-colors duration-300"
             >
               <Linkedin size={28} />
             </motion.a>
-            <motion.a 
-              href="#" 
+            <motion.a
+              href="#"
               whileHover={{ scale: 1.15, y: -2 }}
               className="text-slate-500 hover:text-white transition-colors duration-300"
             >
               <Github size={28} />
             </motion.a>
-            <motion.a 
-              href="#" 
+            <motion.a
+              href="#"
               whileHover={{ scale: 1.15, y: -2 }}
               className="text-slate-500 hover:text-white transition-colors duration-300"
             >
@@ -108,10 +108,9 @@ const ConnectSection = () => {
       </section>
 
       {/* Contact Modal */}
-      <div 
-        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center transition-opacity duration-300 ${
-          isModalOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`} 
+      <div
+        className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center transition-opacity duration-300 ${isModalOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
         onClick={() => setIsModalOpen(false)}
       >
         <motion.div
@@ -126,7 +125,7 @@ const ConnectSection = () => {
           >
             <X size={24} />
           </button>
-          
+
           <div className="mb-6">
             <h2 className="text-2xl font-bold mb-2 text-slate-900">Let's Collaborate!</h2>
             <p className="text-slate-500">
@@ -149,7 +148,7 @@ const ConnectSection = () => {
               <span className="text-xs text-emerald-700 font-medium">Collaborate</span>
             </div>
           </div>
-          
+
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
@@ -171,7 +170,7 @@ const ConnectSection = () => {
                 />
               </div>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium mb-1 text-slate-700">Email</label>
               <input
@@ -181,7 +180,7 @@ const ConnectSection = () => {
                 required
               />
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium mb-1 text-slate-700">I'm interested in...</label>
               <div className="flex flex-wrap gap-3">
@@ -193,7 +192,7 @@ const ConnectSection = () => {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium mb-1 text-slate-700">Message</label>
               <textarea
@@ -204,7 +203,7 @@ const ConnectSection = () => {
                 required
               />
             </div>
-            
+
             <button
               type="submit"
               disabled={isSubmitting}
