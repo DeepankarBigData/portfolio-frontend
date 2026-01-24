@@ -44,6 +44,42 @@ const focusAreas: FocusArea[] = [
         description: 'Built a comprehensive credit scoring model using ensemble methods. Implemented feature stores for real-time inference and monitoring dashboards for model health tracking.',
         image: '/placeholder.svg',
         link: '#'
+      },
+      {
+        title: 'Project 4',
+        description: '',
+        image: '/placeholder.svg',
+        link: '#'
+      },
+      {
+        title: 'Project 5',
+        description: '',
+        image: '/placeholder.svg',
+        link: '#'
+      },
+      {
+        title: 'Project 6',
+        description: '',
+        image: '/placeholder.svg',
+        link: '#'
+      },
+      {
+        title: 'Project 7',
+        description: '',
+        image: '/placeholder.svg',
+        link: '#'
+      },
+      {
+        title: 'Project 8',
+        description: '',
+        image: '/placeholder.svg',
+        link: '#'
+      },
+      {
+        title: 'Project 9',
+        description: '',
+        image: '/placeholder.svg',
+        link: '#'
       }
     ]
   },
