@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Github, X, Send, Users, BookOpen, Briefcase } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
 
 const ConnectSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,7 +17,7 @@ const ConnectSection = () => {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const response = await fetch(FORMSPREE_URL, {
         method: 'POST',
         body: formData,
         headers: {
