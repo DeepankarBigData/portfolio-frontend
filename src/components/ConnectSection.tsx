@@ -66,7 +66,7 @@ const ConnectSection = () => {
             Let's Connect
           </h2>
           <p className="text-slate-400 mb-12 max-w-2xl mx-auto text-lg leading-relaxed">
-            Whether you're a <span className="text-blue-400 font-medium">recruiter</span>, a fellow <span className="text-purple-400 font-medium">engineer</span>, or someone eager to <span className="text-emerald-400 font-medium">learn</span> — I believe we can learn from each other. Feel free to <span className="text-amber-400 font-medium">reach out</span> out to me for collaboration!
+            Whether you're a <span className="text-blue-400 font-medium">recruiter</span>, a fellow <span className="text-purple-400 font-medium">engineer</span>, or someone eager to <span className="text-emerald-400 font-medium">learn</span> — I believe we can learn from each other. Feel free to <span className="text-amber-400 font-medium">reach out</span> to me for collaboration!
           </p>
 
           <div className="flex flex-wrap justify-center gap-5 mb-14">
