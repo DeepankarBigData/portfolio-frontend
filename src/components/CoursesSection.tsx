@@ -1,42 +1,44 @@
 import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-
+import SUNBEAM from '../assets/SUNBEAM.jpg';
+import AZURE from '../assets/Azure.png';
+import EXCEL from '../assets/excel.png';
 const coursesData = [
   {
     title: 'Azure AI Engineer Associate',
     provider: 'Microsoft',
-    certLink: '#',
-    image: '/src/assets/azure_cert.png',
+    certLink: 'https://learn.microsoft.com/api/credentials/share/en-us/DeepankarPawar-8884/D040B1619931FD41?sharingId',
+    image: AZURE,
   },
   {
-    title: 'Machine Learning Specialization',
-    provider: 'Coursera (Stanford/DeepLearning.AI)',
-    certLink: '#',
-    image: '/src/assets/ml_cert.png',
+    title: 'Aptitude and reasoning',
+    provider: 'Sunbeam Institute of Engineering and Technology',
+    // certLink: '#',
+    image: SUNBEAM,
   },
-  {
-    title: 'Deep Learning Specialization',
-    provider: 'Coursera (DeepLearning.AI)',
-    certLink: '#',
-    image: '/src/assets/dl_cert.png',
-  },
-  {
-    title: 'LangChain for LLM Application Development',
-    provider: 'DeepLearning.AI',
-    certLink: '#',
-    image: '/src/assets/langchain_cert.png',
-  },
-  {
-    title: 'AWS Cloud Practitioner',
-    provider: 'Amazon Web Services',
-    certLink: '#',
-    image: '/src/assets/aws_cert.png',
-  },
+  // {
+  //   title: 'Deep Learning Specialization',
+  //   provider: 'Coursera (DeepLearning.AI)',
+  //   certLink: '#',
+  //   image: '/src/assets/Azure.png',
+  // },
+  // {
+  //   title: 'LangChain for LLM Application Development',
+  //   provider: 'DeepLearning.AI',
+  //   certLink: '#',
+  //   image: '/src/assets/langchain_cert.png',
+  // },
+  // {
+  //   title: 'AWS Cloud Practitioner',
+  //   provider: 'Amazon Web Services',
+  //   certLink: '#',
+  //   image: '/src/assets/aws_cert.png',
+  // },
   {
     title: 'Excel Mastery',
     provider: 'Udemy',
-    certLink: '#',
-    image: '/src/assets/excel_cert.png',
+    certLink: 'https://www.udemy.com/certificate/UC-52431e5c-b23d-40f2-a497-850a24abafc8/',
+    image: EXCEL,
   }
 ];
 
