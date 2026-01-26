@@ -1,3 +1,5 @@
+
+
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Sparkles, Cloud, Users, Heart, ExternalLink } from 'lucide-react';
@@ -6,7 +8,11 @@ import taxiImage from '../assets/taxi.jpg';
 import insuranceImage from '../assets/insurance.jpg';
 import invoice_project from '../assets/InvoiceExtraction.png';
 import nexora_project from '../assets/Multiagent.png';
-
+import TechnoSales from '../assets/TechnoSales.png';
+import Sales from '../assets/Sales.png';
+import statistics from '../assets/SkillLync.png';
+import RAG from '../assets/RAG.png';
+import opencv from '../assets/opencv.jpg';
 
 type Project = {
   title: string;
@@ -35,23 +41,23 @@ const focusAreas: FocusArea[] = [
     projects: [
       {
         title: 'Invoice extraction',
-        description: 'End-End Machine Learning project using MLOPS lifecycle. Demonstrated expertise in deploying predictive models using Flask and adeptly created interactive GUIs using HTML and CSS for seamless user experience. Used GradientBoostingRegressor achieving 85% r2_score after tuning.',
+        description: 'End to end Invoice extraction using n8n, context engineering, Form recognizer and Python backend and react frontend',
         image: invoice_project
       },
       {
         title: 'Multi agent system',
         description: 'Model developed for New York City to predict actual taxi prices between two locations, aiming to save users from unfair practices. The project creates a model that accurately predicts and analyzes taxi fares based on distance.',
-        image: '/placeholder.svg'
+        image: nexora_project
       },
       {
         title: 'RAG system for contracts',
         description: 'Model developed for New York City to predict actual taxi prices between two locations, aiming to save users from unfair practices. The project creates a model that accurately predicts and analyzes taxi fares based on distance.',
-        image: nexora_project
+        image: RAG
       },
       {
-        title: 'Opencv',
-        description: 'Built a comprehensive credit scoring model using ensemble methods. Implemented feature stores for real-time inference and monitoring dashboards for model health tracking.',
-        image: '/placeholder.svg'
+        title: 'Mineral Detection using image processing and advance statistics',
+        description: '',
+        image: opencv
       },
       {
         title: 'Manufacturing Bot',
@@ -98,10 +104,22 @@ The project's objective is to create a machine Learning model that can accuratel
         link: 'https://github.com/DeepankarBigData/Taxi-Fare-Prediction'
       },
       {
-        title: 'Project 9',
+        title: 'Techno Sales Analysis',
         description: '',
-        image: '/placeholder.svg',
-        link: '#'
+        image: TechnoSales,
+        link: 'https://app.powerbi.com/view?r=eyJrIjoiMmI2ZDA2MjUtNWUxZi00OTAzLWI0ZmUtZTIyNWViNzI1MTcxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9'
+      },
+      {
+        title: 'Sales Analysis report',
+        description: 'sales report',
+        image: Sales,
+        link: 'https://app.powerbi.com/view?r=eyJrIjoiMWNlYjg3MzgtMDliYi00MTNhLTg1NmUtODk5Y2VjYWEwYzViIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9'
+      },
+      {
+        title: 'Projects on statistics and numerical Analysis',
+        description: '',
+        image: statistics,
+        link: 'https://skill-lync.com/profiles/deepankar-pawar'
       }
     ]
   },
@@ -287,3 +305,12 @@ const FocusSection = () => {
 };
 
 export default FocusSection;
+
+
+
+
+
+
+
+
+
