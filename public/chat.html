@@ -703,7 +703,7 @@
                     answerText += `\n\n<div class="timing-info"><span>⚡</span> Response time: ${data.response_time.toFixed(2)}s</div>`;
                 }
 
-                if (data.sources && data.sources.length > 0) {
+               /* if (data.sources && data.sources.length > 0) {
                     let sourcesHtml = '<div class="sources"><div class="sources-title"><span>📚</span> Sources</div>';
                     data.sources.forEach((source, index) => {
                         const preview = source.content ? source.content.substring(0, 100) + '...' : '';
@@ -711,7 +711,7 @@
                     });
                     sourcesHtml += '</div>';
                     answerText += sourcesHtml;
-                }
+                } */
 
                 addMessage(answerText, false);
 

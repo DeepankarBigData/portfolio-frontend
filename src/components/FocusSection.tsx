@@ -13,12 +13,15 @@ import Sales from '../assets/Sales.png';
 import statistics from '../assets/SkillLync.png';
 import RAG from '../assets/RAG.png';
 import opencv from '../assets/opencv.jpg';
+import Manufacturing from '../assets/MANUBOT.png';
+import pipeline from '../assets/pipeline.png'
 
 type Project = {
   title: string;
   description: string;
   image: string;
   link?: string;
+  category?: 'corporate' | 'hackathon' | 'personal' | 'Numerical Analysis';
 };
 
 type FocusArea = {
@@ -41,33 +44,41 @@ const focusAreas: FocusArea[] = [
     projects: [
       {
         title: 'Invoice extraction',
-        description: 'End to end Invoice extraction using n8n, context engineering, Form recognizer and Python backend and react frontend',
-        image: invoice_project
+        description: `End-to-end invoice extraction solution using an n8n-orchestrated workflow, context engineering, Azure Form Recognizer, a Python backend, and a React frontend.
+A JavaScript-based backend was used to process invoices containing descriptive fields and a limited number of line items, while Azure Form Recognizer was leveraged for complex, highly structured tabular data.
+This hybrid architecture reduced manual invoice processing effort by up to 80% and significantly improved automation, accuracy, and overall processing speed.`,
+        image: invoice_project,
+        category: 'corporate'
       },
       {
         title: 'Multi agent system',
-        description: 'Model developed for New York City to predict actual taxi prices between two locations, aiming to save users from unfair practices. The project creates a model that accurately predicts and analyzes taxi fares based on distance.',
-        image: nexora_project
+        description: `Built a multi-agent system comprising a RAG agent and a CSV agent, and SQL agent with an authentication layer, session history management, and per-user workspaces using Python, enabling users to securely resume and revisit their previously processed chunks and interactions.`,
+        image: nexora_project,
+        category: 'corporate'
       },
       {
         title: 'RAG system for contracts',
-        description: 'Model developed for New York City to predict actual taxi prices between two locations, aiming to save users from unfair practices. The project creates a model that accurately predicts and analyzes taxi fares based on distance.',
-        image: RAG
+        description:`'this is not LLM, its only retrieval from the contracts documents like terms like MRC, NRC, Agreement number, insurance of the Server, Limitations on liability, Force majeure termination, Extension term etc using azure AI search along with chunking strategy`,
+        image: RAG,
+        category: 'corporate'
       },
       {
         title: 'Mineral Detection using image processing and advance statistics',
-        description: '',
-        image: opencv
+        description: 'previously the probabibility of points before 10 %, we have reached to 40% after adding machine learning layer',
+        image: opencv,
+        category: 'corporate'
       },
       {
         title: 'Manufacturing Bot',
-        description: 'Intent classifcation',
-        image: '/placeholder.svg'
+        description: `A manufacturing BOT based on intent Intent classifcation for answering the labors availability. (used by builders, owners)`,
+        image: Manufacturing,
+        category: 'corporate'
       },
       {
-        title: 'Machine learning Model Deployment',
-        description: '',
-        image: '/placeholder.svg'
+        title: 'pipeline completion time prediction prediction',
+        description: 'Built an Azure ML–based pipeline end-time prediction system using Python and historical log data. Successfully trained an XGBoost model achieving up to 85% accuracy in predicting pipeline completion time.',
+        image: pipeline,
+        category: 'corporate'
       },
       {
         title: 'PCB Fault Detection',
@@ -84,7 +95,8 @@ const focusAreas: FocusArea[] = [
                       Automated Fault Detection System: we will Develop an AI - powered system capable of quickly and accurately detecting faults in PCBs using techniques such as machine learning, computer vision, and signal processing.i.e automated PCB fault detection systems 
                       Impact - the fault detection process will increase production efficiency, shorten time to - market, and enable companies to meet customer demands more effectively.`,
         image: pcbImage,
-        link: 'https://github.com/DeepankarBigData/Printed-Circuit-Board-PCB-Fault-detection'
+        link: 'https://github.com/DeepankarBigData/Printed-Circuit-Board-PCB-Fault-detection',
+        category: 'hackathon'
       },
       {
         title: 'Medical Insurance Premium Prediction',
@@ -92,8 +104,8 @@ const focusAreas: FocusArea[] = [
 how much premium they have to pay per month based on their individual health
 situation. It was a regression problem which gave r2_score of 85 %`,
         image: insuranceImage,
-        link: 'https://github.com/DeepankarBigData/Insurance-Charges-Prediction'
-
+        link: 'https://github.com/DeepankarBigData/Insurance-Charges-Prediction',
+        category: 'personal'
       },
       {
         title: 'Taxi Fare Prediction',
@@ -101,25 +113,29 @@ situation. It was a regression problem which gave r2_score of 85 %`,
 Predictable and fair pricing is essential for customer satisfaction. Disputes over fares can lead to tense situations, affecting overall safety. To address these issues and save users from unfair practices, there is a pressing need to develop a model for accurate taxi fare prediction. 
 The project's objective is to create a machine Learning model that can accurately predict and analyze taxi fares based on distance, number of passenger, pickup and drop-off points assisting the passenger, tourists who are unfamiliar with the fare amounts in the city`,
         image: taxiImage,
-        link: 'https://github.com/DeepankarBigData/Taxi-Fare-Prediction'
+        link: 'https://github.com/DeepankarBigData/Taxi-Fare-Prediction',
+        category: 'personal'
       },
       {
         title: 'Techno Sales Analysis',
         description: '',
         image: TechnoSales,
-        link: 'https://app.powerbi.com/view?r=eyJrIjoiMmI2ZDA2MjUtNWUxZi00OTAzLWI0ZmUtZTIyNWViNzI1MTcxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9'
+        link: 'https://app.powerbi.com/view?r=eyJrIjoiMmI2ZDA2MjUtNWUxZi00OTAzLWI0ZmUtZTIyNWViNzI1MTcxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9',
+        category: 'personal'
       },
       {
         title: 'Sales Analysis report',
         description: 'sales report',
         image: Sales,
-        link: 'https://app.powerbi.com/view?r=eyJrIjoiMWNlYjg3MzgtMDliYi00MTNhLTg1NmUtODk5Y2VjYWEwYzViIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9'
+        link: 'https://app.powerbi.com/view?r=eyJrIjoiMWNlYjg3MzgtMDliYi00MTNhLTg1NmUtODk5Y2VjYWEwYzViIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9',
+        category: 'personal'
       },
       {
         title: 'Projects on statistics and numerical Analysis',
         description: '',
         image: statistics,
-        link: 'https://skill-lync.com/profiles/deepankar-pawar'
+        link: 'https://skill-lync.com/profiles/deepankar-pawar',
+        category: 'Numerical Analysis'
       }
     ]
   },
@@ -176,6 +192,41 @@ The project's objective is to create a machine Learning model that can accuratel
 const FocusSection = () => {
   const [activeTab, setActiveTab] = useState('aiml');
   const activeArea = focusAreas.find(area => area.id === activeTab)!;
+
+  const getCategoryBadge = (category?: string) => {
+    switch (category) {
+      case 'corporate':
+        return {
+          bg: 'bg-blue-100',
+          text: 'text-blue-700',
+          label: '💼 Corporate'
+        };
+         case 'Numerical Analysis':
+        return {
+          bg: 'bg-blue-100',
+          text: 'text-blue-900',
+          label: '💼 Numerical Analysis'
+        };
+      case 'hackathon':
+        return {
+          bg: 'bg-purple-100',
+          text: 'text-purple-700',
+          label: '🏆 Hackathon'
+        };
+      case 'personal':
+        return {
+          bg: 'bg-green-100',
+          text: 'text-green-700',
+          label: '⭐ Personal'
+        };
+      default:
+        return {
+          bg: 'bg-slate-100',
+          text: 'text-slate-700',
+          label: 'Project'
+        };
+    }
+  };
 
   return (
     <section id="focus" className="py-24 px-6 bg-white">
@@ -240,16 +291,23 @@ const FocusSection = () => {
 
                       {/* Project Info */}
                       <div className="space-y-4">
-                        <h3 className="text-2xl font-bold text-slate-900">
-                          {project.title}
-                        </h3>
-                        <p className="text-slate-600 leading-relaxed text-base">
+                        <div className="flex items-center gap-3">
+                          <h3 className="text-3xl md:text-4xl font-bold text-slate-900">
+                            {project.title}
+                          </h3>
+                          {project.category && (
+                            <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryBadge(project.category).bg} ${getCategoryBadge(project.category).text}`}>
+                              {getCategoryBadge(project.category).label}
+                            </span>
+                          )}
+                        </div>
+                        <p className="text-slate-600 leading-relaxed text-lg">
                           {project.description}
                         </p>
                         {project.link && (
                           <a
                             href={project.link}
-                            className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-800 font-medium transition-colors group"
+                            className="inline-flex items-center gap-2 text-slate-600 hover:text-slate-800 font-medium transition-colors group text-base"
                           >
                             View Project
                             <ExternalLink size={16} className="group-hover:translate-x-1 transition-transform" />
