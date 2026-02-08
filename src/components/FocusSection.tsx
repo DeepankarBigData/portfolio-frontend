@@ -15,6 +15,7 @@ import RAG from '../assets/RAG.png';
 import opencv from '../assets/Opencv.jpg';
 import Manufacturing from '../assets/MANUBOT.png';
 import pipeline from '../assets/pipeline.png'
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 type Project = {
   title: string;
