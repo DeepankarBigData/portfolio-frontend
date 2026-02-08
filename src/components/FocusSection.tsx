@@ -12,7 +12,7 @@ import TechnoSales from '../assets/TechnoSales.png';
 import Sales from '../assets/Sales.png';
 import statistics from '../assets/SkillLync.png';
 import RAG from '../assets/RAG.png';
-import opencv from '../assets/opencv.jpg';
+import opencv from '../assets/Opencv.jpg';
 import Manufacturing from '../assets/MANUBOT.png';
 import pipeline from '../assets/pipeline.png'
 
@@ -58,7 +58,7 @@ This hybrid architecture reduced manual invoice processing effort by up to 80% a
       },
       {
         title: 'RAG system for contracts',
-        description:`'this is not LLM, its only retrieval from the contracts documents like terms like MRC, NRC, Agreement number, insurance of the Server, Limitations on liability, Force majeure termination, Extension term etc using azure AI search along with chunking strategy`,
+        description: `'this is not LLM, its only retrieval from the contracts documents like terms like MRC, NRC, Agreement number, insurance of the Server, Limitations on liability, Force majeure termination, Extension term etc using azure AI search along with chunking strategy`,
         image: RAG,
         category: 'corporate'
       },
@@ -201,7 +201,7 @@ const FocusSection = () => {
           text: 'text-blue-700',
           label: '💼 Corporate'
         };
-         case 'Numerical Analysis':
+      case 'Numerical Analysis':
         return {
           bg: 'bg-blue-100',
           text: 'text-blue-900',
