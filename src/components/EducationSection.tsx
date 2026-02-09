@@ -1,29 +1,32 @@
 import { motion } from 'framer-motion';
-
+import cdacImage from '../assets/cdac.jpg';
+import college1Image from '../assets/college1.jpg';
+import hscImage from '../assets/HSC.jpg';
+import sscImage from '../assets/SSC.jpg';
 const educationData = [
   {
     degree: 'C-DAC, PG Diploma in Data Science',
     institution: 'C-DAC, Hyderabad',
     period: '2022-2023  |  Grade: A',
-    image: '/src/assets/cdac.jpg',
+    image: cdacImage,
   },
   {
     degree: 'Bachelor of Engineering in Mechanical Engineering',
     institution: 'Dr DY Patil School of engineering, Pune | SPPU',
     period: '2016-2020  |  CGPA: 7.83',
-    image: '/src/assets/college1.jpg',
+    image: college1Image,
   },
   {
     degree: 'HSC Science',
     institution: 'Progressive Education Society, Nashik',
     period: '2014-2016  |  Grade: B',
-    image: '/src/assets/HSC.jpg',
+    image: hscImage,
   },
   {
     degree: 'SSC',
     institution: 'Holy Flower English High School, Nashik',
     period: '2002-2014  |  Percentage: 75%',
-    image: '/src/assets/SSC.jpg',
+    image: sscImage,
   }
 ];
 
