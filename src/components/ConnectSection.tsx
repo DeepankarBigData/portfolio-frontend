@@ -83,14 +83,18 @@ const ConnectSection = () => {
 
           <div className="flex justify-center gap-8">
             <motion.a
-              href="#"
+              href="https://www.linkedin.com/in/deepankar98datascience/"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.15, y: -2 }}
               className="text-slate-500 hover:text-white transition-colors duration-300"
             >
               <Linkedin size={28} />
             </motion.a>
             <motion.a
-              href="#"
+              href="https://github.com/DeepankarBigData"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.15, y: -2 }}
               className="text-slate-500 hover:text-white transition-colors duration-300"
             >
