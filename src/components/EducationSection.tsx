@@ -3,6 +3,7 @@ import cdacImage from '../assets/cdac.jpg';
 import college1Image from '../assets/college1.jpg';
 import hscImage from '../assets/HSC.jpg';
 import sscImage from '../assets/SSC.jpg';
+
 const educationData = [
   {
     degree: 'C-DAC, PG Diploma in Data Science',
