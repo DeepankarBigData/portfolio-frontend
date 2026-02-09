@@ -58,7 +58,7 @@ const HeroSection = () => {
             </motion.a>
 
             <motion.a
-              href="public/DeepankarResume.pdf"
+              href="/DeepankarResume.pdf"
               download
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
