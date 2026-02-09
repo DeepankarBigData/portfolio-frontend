@@ -30,7 +30,7 @@ const HeroSection = () => {
           </motion.div>
 
           <p className="text-sm uppercase tracking-widest text-slate-400 font-medium mb-4">
-            AI/ML Engineer • Finance Enthusiast
+            AI/ML Engineer • Automation Enthusiast
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
