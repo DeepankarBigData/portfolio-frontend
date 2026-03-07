@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { MessageSquare, Download } from 'lucide-react';
-import profileImage from '../assets/profile.jpg';
+import profileImage from '../assets/profile.jpeg';
 import AIBackgroundAnimation from './AIBackgroundAnimation';
 
 const HeroSection = () => {
