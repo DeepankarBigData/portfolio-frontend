@@ -30,7 +30,7 @@ const HeroSection = () => {
           </motion.div>
 
           <p className="text-sm uppercase tracking-widest text-slate-400 font-medium mb-4">
-            AI/ML Engineer • Automation Enthusiast
+            AI/ML Engineer • Automation Enthusiast • MBA Finance
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -39,7 +39,7 @@ const HeroSection = () => {
 
           <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
             Building intelligent systems at the intersection of AI and automation.
-            Currently crafting AI solutions at Praval Infotech while pursuing courses at Coursera.
+            Currently crafting AI solutions at Praval Infotech while pursuing MBA in Finance.
           </p>
 
           {/* Primary Action Buttons */}
