@@ -9,7 +9,7 @@ const educationData = [
     {
     degree: 'MBA in Finance',
     institution: 'Symbiosis (SSODL), Pune',
-    period: '2026-2028,
+    period: '2026-2028',
     image: symbiosisImage,
   },
   {
