@@ -5,6 +5,12 @@ import hscImage from '../assets/HSC.jpg';
 import sscImage from '../assets/SSC.jpg';
 
 const educationData = [
+    {
+    degree: 'MBA in Finance',
+    institution: 'Symbiosis (SSODL), Pune',
+    period: '2022-2023  |  Grade: A',
+    image: cdacImage,
+  },
   {
     degree: 'C-DAC, PG Diploma in Data Science',
     institution: 'C-DAC, Hyderabad',
