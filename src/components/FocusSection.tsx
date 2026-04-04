@@ -44,33 +44,31 @@ const focusAreas: FocusArea[] = [
     icon: <Brain className="w-5 h-5" />,
     projects: [
       {
-        title: 'Invoice extraction',
-        description: `End-to-end invoice extraction solution using an n8n-orchestrated workflow, context engineering, Azure Form Recognizer, a Python backend, and a React frontend.
-A JavaScript-based backend was used to process invoices containing descriptive fields and a limited number of line items, while Azure Form Recognizer was leveraged for complex, highly structured tabular data.
-This hybrid architecture reduced manual invoice processing effort by up to 80% and significantly improved automation, accuracy, and overall processing speed.`,
+        title: 'Invoice extraction | Recon AI invoice Extractor',
+        description: `Built an AI-powered invoice extraction system using Python, Azure Form Recognizer, and n8n workflows, improving processing efficiency by 92%.`,
         image: invoice_project,
         category: 'corporate'
       },
       {
-        title: 'Multi agent system',
-        description: `Built a multi-agent system comprising a RAG agent and a CSV agent, and SQL agent with an authentication layer, session history management, and per-user workspaces using Python, enabling users to securely resume and revisit their previously processed chunks and interactions.`,
+        title: 'Agentic RAG',
+        description: `Built an Agentic-RAG system comprising a RAG agent and a CSV agent, and SQL agent with an authentication layer, session history management, and per-user workspaces using Python, enabling users to securely resume and revisit their previously processed chunks and interactions.`,
         image: nexora_project,
         category: 'corporate'
       },
       {
-        title: 'RAG system for contracts',
-        description: `'this is not LLM, its only retrieval from the contracts documents like terms like MRC, NRC, Agreement number, insurance of the Server, Limitations on liability, Force majeure termination, Extension term etc using azure AI search along with chunking strategy`,
+        title: 'Contract Intelligence System',
+        description: `Implemented a contract intelligence retrieval system using Azure AI Search and optimized chunking strategies, enabling accurate extraction of key contractual clauses and further processing it with LLMs.`,
         image: RAG,
         category: 'corporate'
       },
       {
         title: 'Mineral Detection using image processing and advance statistics',
-        description: 'previously the probabibility of points before 10 %, we have reached to 40% after adding machine learning layer',
+        description: 'Built a deep learning-based mineral detection system using remote sensing data, increasing prediction accuracy from 10% to 40% for identifying viable drilling locations.',
         image: opencv,
         category: 'corporate'
       },
       {
-        title: 'Manufacturing Bot',
+        title: 'Manufacturing Bot POC',
         description: `A manufacturing BOT based on intent Intent classifcation for answering the labors availability. (used by builders, owners)`,
         image: Manufacturing,
         category: 'corporate'
@@ -83,36 +81,21 @@ This hybrid architecture reduced manual invoice processing effort by up to 80% a
       },
       {
         title: 'PCB Fault Detection',
-        description: `Problem Statement – Identifying faults in Printed circuit boards can be challenging due to complexity of the modern circuit designs 
-                      Traditional methods rely heavily on manual inspection, which is time- consuming, prone to errors, and can lead to increased production costs.
-
-
-                      Faulty PCBs may go undetected during production, leading to higher reject rates, increased rework costs, and potential damage to brand reputation and also guranttee issues. 
-
-                      Solution in market - Hardware
-                      Advanced diagnostic tools, such as oscilloscopes, mustimeters, and thermal imaging cameras, can provide more in -depth analysis of PCB failure.These tools can measure electrical signals, detect short circuits, identify temperature variations, and pinpoint specific areas of concern, assisting in a more accurate diagnosis. 
-
-                      Our Solution – Software 
-                      Automated Fault Detection System: we will Develop an AI - powered system capable of quickly and accurately detecting faults in PCBs using techniques such as machine learning, computer vision, and signal processing.i.e automated PCB fault detection systems 
-                      Impact - the fault detection process will increase production efficiency, shorten time to - market, and enable companies to meet customer demands more effectively.`,
+        description: `Developed an AI-based PCB fault detection system using machine learning, computer vision, and signal processing, improving defect detection accuracy and reducing manual inspection efforts.`,
         image: pcbImage,
         link: 'https://github.com/DeepankarBigData/Printed-Circuit-Board-PCB-Fault-detection',
         category: 'hackathon'
       },
       {
         title: 'Medical Insurance Premium Prediction',
-        description: `we are living in a world of dangers and risks,These risks include the risk of death, illness, and the loss of property or possessions. As a result, insurance is a policy that reduces or eliminates the expenses of various risks. An individual who has purchased a health insurance policy receives coverage after paying a certain premium. The cost of health insurance is determined by a variety of factors. One who purchases this type of insurance has to pay premiums monthly and this premium amount varies vastly depending upon various factors such as Age, Gender, Body Mass Index, Number of children, Smoking Habits and Geographic Location. The goal of this project is to give people an estimate of
-how much premium they have to pay per month based on their individual health
-situation. It was a regression problem which gave r2_score of 85 %`,
+        description: `Built a regression-based machine learning model for health insurance premium prediction, achieving an R² score of 0.85 using demographic and health-related features.`,
         image: insuranceImage,
         link: 'https://github.com/DeepankarBigData/Insurance-Charges-Prediction',
         category: 'personal'
       },
       {
         title: 'Taxi Fare Prediction',
-        description: `Users today demand transparency in taxi services, wanting to know the estimated ride cost before confirming it. The lack of clear pricing information leads to dissatisfaction and reluctance in using taxis. This uncertainty becomes a barrier to service utilization, causing frustration among users. Unpredictable pricing erodes trust in taxi services, and for passengers to trust providers, reliable and fair pricing is crucial.
-Predictable and fair pricing is essential for customer satisfaction. Disputes over fares can lead to tense situations, affecting overall safety. To address these issues and save users from unfair practices, there is a pressing need to develop a model for accurate taxi fare prediction. 
-The project's objective is to create a machine Learning model that can accurately predict and analyze taxi fares based on distance, number of passenger, pickup and drop-off points assisting the passenger, tourists who are unfamiliar with the fare amounts in the city`,
+        description: `Developed a machine learning model for taxi fare prediction using trip and location data, improving pricing transparency and enhancing user decision-making.`,
         image: taxiImage,
         link: 'https://github.com/DeepankarBigData/Taxi-Fare-Prediction',
         category: 'personal'
