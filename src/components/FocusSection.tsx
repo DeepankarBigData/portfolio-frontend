@@ -15,6 +15,7 @@ import RAG from '../assets/RAG.png';
 import opencv from '../assets/Opencv.jpg';
 import Manufacturing from '../assets/MANUBOT.png';
 import pipeline from '../assets/pipeline.png'
+import synapse from '../assets/synapse_analytics.jpg' 
 const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 type Project = {
@@ -77,6 +78,18 @@ const focusAreas: FocusArea[] = [
         title: 'pipeline completion time prediction prediction',
         description: 'Built an Azure ML–based pipeline end-time prediction system using Python and historical log data. Successfully trained an XGBoost model achieving up to 85% accuracy in predicting pipeline completion time.',
         image: pipeline,
+        category: 'corporate'
+      },
+      {
+        title: 'Data Migration (Azure synapse Analytics',
+        description: 'Worked on data migration project using Azure Synapse Analytics, ensuring accuracy and reliability.
+- Optimized complex SQL queries for performance and scalability.
+- Performed data validation and unit testing to maintain high data quality standards.
+- Set up Linked Services and Integration Runtimes (IR) for connecting data to the respective sources.
+- Created and managed Lake Database tables to structure and organize data in Azure Data Lake.
+- Built Synapse Notebooks leveraging fuzzy logic for intelligent data matching and transformation.
+This experience strengthened my foundation in cloud data engineering, ETL processes, and data quality frameworks, which complements my long-term goal of building AI-driven data solutions.',
+        image: synapse,
         category: 'corporate'
       },
       {
