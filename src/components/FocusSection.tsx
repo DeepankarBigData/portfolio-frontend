@@ -83,12 +83,11 @@ const focusAreas: FocusArea[] = [
       {
         title: 'Data Migration (Azure synapse Analytics',
         description: 'Worked on data migration project using Azure Synapse Analytics, ensuring accuracy and reliability.
-- Optimized complex SQL queries for performance and scalability.
-- Performed data validation and unit testing to maintain high data quality standards.
-- Set up Linked Services and Integration Runtimes (IR) for connecting data to the respective sources.
-- Created and managed Lake Database tables to structure and organize data in Azure Data Lake.
-- Built Synapse Notebooks leveraging fuzzy logic for intelligent data matching and transformation.
-This experience strengthened my foundation in cloud data engineering, ETL processes, and data quality frameworks, which complements my long-term goal of building AI-driven data solutions.',
+                     - Optimized complex SQL queries for performance and scalability.
+                     - Performed data validation and unit testing to maintain high data quality standards.
+                     - Set up Linked Services and Integration Runtimes (IR) for connecting data to the respective sources.
+                     - Created and managed Lake Database tables to structure and organize data in Azure Data Lake.
+                     - Built Synapse Notebooks leveraging fuzzy logic for intelligent data matching and transformation. This experience strengthened my foundation in cloud data engineering, ETL processes, and data quality frameworks, which complements my long-term goal of building AI-driven data solutions.',
         image: synapse,
         category: 'corporate'
       },
